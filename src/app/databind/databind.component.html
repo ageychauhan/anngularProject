@@ -1,0 +1,18 @@
+<p>name is {{dynname.toUpperCase()}}</p> 
+<br/><br/>
+ use of method<br/><br/>
+{{ mymethod()}} 
+<br/><br/>
+
+My app status is {{appstatus? "online" : "offline"}}
+
+<br/><br/>
+else second trick<br/><br/>
+My app status is {{appstatus2? status1 : status2}}
+<br/><br/>
+property binding
+<br/>
+<input type="text" [disabled] = "true" name="" id="" [value]="dynname">
+<br/>
+second way 
+<input type="text" name="" id="" bind-value="dynname">
