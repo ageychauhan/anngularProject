@@ -10,6 +10,7 @@ import { Txtsec1Component } from './myContainer/txtsec1/txtsec1.component';
 import { Txtsec2Component } from './myContainer/txtsec2/txtsec2.component';
 import { DatabindComponent } from './databind/databind.component';
 import { ClassStyleComponent } from './class-style/class-style.component';
+import { EventbindingComponent } from './eventbinding/eventbinding.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ClassStyleComponent } from './class-style/class-style.component';
     Txtsec2Component,
     DatabindComponent,
     ClassStyleComponent,
+    EventbindingComponent,
     
   ],
   imports: [
