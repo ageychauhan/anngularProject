@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {FormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyContainerComponent } from './myContainer/myContainer.component';
@@ -11,6 +11,8 @@ import { Txtsec2Component } from './myContainer/txtsec2/txtsec2.component';
 import { DatabindComponent } from './databind/databind.component';
 import { ClassStyleComponent } from './class-style/class-style.component';
 import { EventbindingComponent } from './eventbinding/eventbinding.component';
+import { TwoWayDatabindComponent } from './two-way-databind/two-way-databind.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -23,11 +25,14 @@ import { EventbindingComponent } from './eventbinding/eventbinding.component';
     DatabindComponent,
     ClassStyleComponent,
     EventbindingComponent,
+    TwoWayDatabindComponent,
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
