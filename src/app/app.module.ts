@@ -13,7 +13,10 @@ import { ClassStyleComponent } from './class-style/class-style.component';
 import { EventbindingComponent } from './eventbinding/eventbinding.component';
 import { TwoWayDatabindComponent } from './two-way-databind/two-way-databind.component';
 import { from } from 'rxjs';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//ngx bootstrape
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { NgifComponent } from './ngif/ngif.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,12 +29,15 @@ import { from } from 'rxjs';
     ClassStyleComponent,
     EventbindingComponent,
     TwoWayDatabindComponent,
+    NgifComponent,
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    BsDatepickerModule.forRoot()
     
   ],
   providers: [],
