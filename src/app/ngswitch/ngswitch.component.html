@@ -1,0 +1,22 @@
+<div class="container">
+<div class="col-md-4">
+<select class="form-control" (change)="getproductval($event)">
+<option value="laptop">Laptop</option>
+<option value="tv">Tv</option>
+<option value="mobile">Mobile</option>
+<option value="washing machine">Washing Machine</option>
+<option value="tablet">Tablet</option>
+</select>
+</div>
+<div class="col-md-12" [ngSwitch]="selectedproduct">
+<h2 class="text-success" *ngSwitchCase="'laptop'">Laptop
+    <p>A laptop (also laptop computer), often called a notebook, is a small, portable personal computer (PC) with a "clamshell" form factor, typically having a thin LCD or LED computer screen mounted on the inside of the upper lid of the clamshell and an alphanumeric keyboard on the inside of the lower lid.</p>
+</h2>
+<h2 class="text-success" *ngSwitchCase="'tv'">Tv
+    <p>Television (TV), sometimes shortened to tele or telly, is a telecommunication medium used for transmitting moving images in monochrome (black and white), ..</p>
+</h2>
+<h2 class="text-success" *ngSwitchCase="'mobile'">Mobile</h2>
+<h2 class="text-success" *ngSwitchCase="'washing machine'">Washing Machine</h2>
+<h2 class="text-success" *ngSwitchCase="'tablet'">Tablet</h2>
+</div>
+</div>
