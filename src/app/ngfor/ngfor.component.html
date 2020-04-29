@@ -1,0 +1,24 @@
+<div class="container">
+<div class="row">
+    <div class="col-md-10">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Product Image</th>
+                    <th>Product Name</th>
+                    <th>Product Id</th>
+                    <th>Product Price</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mypro of products">
+                <th><img src="{{mypro.proimg}}" width="100" height="80" alt=""></th>
+                <th>{{mypro.name}}</th>
+                <th>{{mypro.id}}</th>
+                <th>{{mypro.price}}</th>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+</div>
