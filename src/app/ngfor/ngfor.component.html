@@ -1,5 +1,5 @@
 <div class="container">
-<div class="row">
+<!-- <div class="row">
     <div class="col-md-10">
         <table class="table">
             <thead class="thead-dark">
@@ -18,6 +18,35 @@
                 <th>{{mypro.price}}</th>
             </tr>
         </tbody>
+        </table>
+    </div>
+</div> -->
+<div class="row">
+    <div class="col-md-3">
+        <input #uname type="text" name="" placeholder="user name"  class="form-control">
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-success" (click)="onCreateUser(uname)">Create user</button>
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-danger" (click)="onCreateUser(uname)">Delete user</button>
+    </div>
+</div><br/><br/>
+<div class="row">
+    <div class="col-md-10">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr >
+                    <th>User Name</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users; index as i">
+                    <td>{{user.name}}</td>
+                    <td><button class="btn btn-danger" (click)="onRemoveUser(i)">Remove Item</button></td>
+                </tr>
+            </tbody>
         </table>
     </div>
 </div>
