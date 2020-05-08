@@ -19,6 +19,25 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { NgifComponent } from './ngif/ngif.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { NgforComponent } from './ngfor/ngfor.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ProductComponent } from './product/product.component';
+import { ContactComponent } from './contact/contact.component';
+import { Routes, RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+
+const appRouters:Routes=[
+{path:'' , redirectTo:'login',pathMatch:'full'},
+{path:'login' , component:LoginComponent},
+{path:'home' , component:HomeComponent},
+{path:'about', component:AboutComponent},
+{path:'product', component:ProductComponent},
+{path:'contact', component:ContactComponent},
+
+{path:'**', component:PagenotfoundComponent}, //to redirect on 404 page put '**' in path always declare last
+]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +53,12 @@ import { NgforComponent } from './ngfor/ngfor.component';
     NgifComponent,
     NgswitchComponent,
     NgforComponent,
+    HomeComponent,
+    AboutComponent,
+    ProductComponent,
+    ContactComponent,
+    LoginComponent,
+    PagenotfoundComponent,
     
   ],
   imports: [
@@ -41,7 +66,9 @@ import { NgforComponent } from './ngfor/ngfor.component';
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    RouterModule.forRoot(appRouters)
+
     
   ],
   providers: [],
